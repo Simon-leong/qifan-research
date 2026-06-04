@@ -582,7 +582,7 @@ Feel free to reach out if you are interested in collaboration or potential oppor
 <div class="publication-card pub-card--journal" data-category="all">
   <div style="display: flex; align-items: center;">
     <div class="pub-media-rotator" data-interval="4000" style="position: relative; width: 320px; height: 180px; margin-right: 20px; border-radius: 8px; overflow: hidden; flex: 0 0 auto;">
-      <img src="images/tomm_new.png" alt="TOMM" style="width: 320px; height: 180px; object-fit: contain; display: block; margin: 0 auto;">
+      <img src="images/new/tomm.png" alt="TOMM" style="width: 320px; height: 180px; object-fit: contain; display: block; margin: 0 auto;">
     </div>
     <div>
       <strong>Few-Shot Face Sketch-to-Photo Synthesis via Global-Local Asymmetric Image-to-Image Translation</strong><br>
