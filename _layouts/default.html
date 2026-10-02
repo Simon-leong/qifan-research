@@ -9,10 +9,11 @@ layout: compress
     {% include head/custom.html %}
   </head>
 
-  <body>
+  <body{% if site.hero.image %} class="has-hero"{% endif %}>
 
     {% include browser-upgrade.html %}
     {% include masthead.html %}
+    {% include hero.html %}
 
     <div id="main" role="main">
       {% include sidebar.html %}

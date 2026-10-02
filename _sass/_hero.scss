@@ -1,0 +1,157 @@
+/* ==========================================================================
+   HERO — full-bleed campus banner under the masthead
+   ========================================================================== */
+
+// Sized so the whole building stays in frame: phones get the photo's full
+// height, wider screens a letterbox centred on the façade.
+$hero-height-sm     : 56vw;                          // phones: show the photo's full height…
+$hero-height-sm-max : 360px;                         // …up to a cap (plain max-height: LibSass can't parse CSS min())
+$hero-height        : clamp(200px, 26vw, 440px);     // tablet and up
+$hero-tint          : #0a1a33;                       // blue-hour navy, sampled from the photo's dusk sky
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  height: $hero-height-sm;
+  max-height: $hero-height-sm-max;
+  background-color: $hero-tint;  // shown while the photo loads
+
+  @include breakpoint($medium) {
+    height: $hero-height;
+    max-height: none;
+  }
+
+  &__media,
+  &__img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__img {
+    object-fit: cover;
+    animation: hero-settle 1.6s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+
+  // Depth: soft top shade where the masthead meets the photo, a vignette,
+  // and a deeper floor so the credit stays legible.
+  &__scrim {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background:
+      linear-gradient(180deg,
+        rgba($hero-tint, 0.18) 0%,
+        rgba($hero-tint, 0) 28%,
+        rgba($hero-tint, 0) 55%,
+        rgba($hero-tint, 0.55) 100%),
+      radial-gradient(120% 90% at 50% 40%,
+        rgba($hero-tint, 0) 60%,
+        rgba($hero-tint, 0.28) 100%);
+  }
+
+  &__credit {
+    position: absolute;
+    right: 1.25em;
+    bottom: 0.9em;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: baseline;
+    gap: 0.25em 0.9em;
+    max-width: calc(100% - 2.5em);
+    margin: 0;
+    font-family: $sans-serif;
+    font-size: 11px;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.72);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+    animation: hero-fade 0.8s 0.9s ease-out both;
+
+    a {
+      color: inherit !important;
+      text-decoration: none !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+      transition: color 0.2s ease, border-color 0.2s ease;
+
+      &:hover,
+      &:focus-visible {
+        color: #fff !important;
+        border-color: #fff;
+      }
+    }
+  }
+
+  &__caption {
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  @include breakpoint(max-width ($medium-wide - 1px)) {
+    &__attrib { display: none; }   // keep the strip quiet on phones; caption stays
+  }
+}
+
+// Gentle parallax while the banner scrolls away (progressive enhancement, no JS)
+@supports (animation-timeline: view()) {
+  .hero__media {
+    animation: hero-drift linear both;
+    animation-timeline: view();
+    animation-range: exit 0% exit 100%;
+  }
+}
+
+/* Page below the banner
+   ========================================================================== */
+
+.has-hero {
+  #main {
+    margin-top: 1.5em;
+  }
+
+  // White ring + soft shadow lets the avatar echo the photo's depth.
+  .author__avatar img {
+    background: #fff;
+    box-shadow: 0 10px 28px -10px rgba($hero-tint, 0.45);
+    animation: hero-avatar-rise 0.9s 0.35s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+}
+
+@keyframes hero-settle {
+  from { opacity: 0; transform: scale(1.06); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes hero-fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes hero-avatar-rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes hero-drift {
+  to { transform: translateY(22%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__img,
+  .hero__credit,
+  .hero__media,
+  .has-hero .author__avatar img {
+    animation: none !important;
+  }
+}
+
+@media print {
+  .hero { display: none; }
+}

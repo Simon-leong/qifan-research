@@ -1,3 +1,7 @@
 _site/
 push.sh
 .DS_Store
+
+# Not published: CV and figure source files
+images/new/*.pdf
+images/new/SurgIntent.png

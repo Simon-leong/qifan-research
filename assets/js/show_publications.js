@@ -29,3 +29,24 @@ function showPublications(type) {
 document.addEventListener('DOMContentLoaded', () => {
   filterPublications(null, 'core');
 });
+
+// Papers under review: show a notice instead of opening a link.
+document.addEventListener('click', (event) => {
+  const link = event.target.closest('.pub-review-link');
+  if (!link) return;
+  event.preventDefault();
+
+  let toast = document.querySelector('.pub-review-toast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.className = 'pub-review-toast';
+    toast.setAttribute('role', 'status');
+    toast.setAttribute('aria-live', 'polite');
+    toast.textContent = 'This paper is currently under review and will be released after acceptance.';
+    document.body.appendChild(toast);
+  }
+
+  toast.classList.add('is-visible');
+  window.clearTimeout(toast.hideTimer);
+  toast.hideTimer = window.setTimeout(() => toast.classList.remove('is-visible'), 3000);
+});

@@ -1,0 +1,18 @@
+{% assign hero = site.hero %}
+{% if hero.image %}
+<header class="hero" role="banner">
+  <picture class="hero__media">
+    {% if hero.webp_srcset %}<source type="image/webp" srcset="{{ hero.webp_srcset }}" sizes="100vw">{% endif %}
+    <img class="hero__img" src="{{ hero.image }}" alt="{{ hero.alt }}"
+         width="1600" height="598" fetchpriority="high" decoding="async"
+         {% if hero.position %}style="object-position: {{ hero.position }};"{% endif %}>
+  </picture>
+  <div class="hero__scrim" aria-hidden="true"></div>
+  {% if hero.caption or hero.credit %}
+  <p class="hero__credit">
+    {% if hero.caption %}<span class="hero__caption">{{ hero.caption }}</span>{% endif %}
+    {% if hero.credit %}<span class="hero__attrib">Photo: <a href="{{ hero.credit_url }}" target="_blank" rel="noopener">{{ hero.credit }}</a>{% if hero.license %}, <a href="{{ hero.license_url }}" target="_blank" rel="noopener license">{{ hero.license }}</a>{% endif %}</span>{% endif %}
+  </p>
+  {% endif %}
+</header>
+{% endif %}

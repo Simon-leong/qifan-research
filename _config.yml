@@ -8,7 +8,10 @@
 # Site Settings
 title                    : "Qifan Liang's Homepage"
 description              : "Qifan Liang's Homepage"
-repository               : "Simon-leong/Simon-leong.github.io"
+url                      : "https://simon-leong.github.io"
+baseurl                  : "/qifan-research"
+repository               : "Simon-leong/qifan-research"
+noindex                  : true   # keep this site out of search engines; it is shared only via the CV
 google_scholar_stats_use_cdn : true
 
 # google analytics
@@ -29,7 +32,7 @@ author:
   employer         :
   pubmed           :
   googlescholar    : "https://scholar.google.com/citations?user=XJU7FyUAAAAJ"
-  email            : "liangqifan@whu.edu.com"
+  email            : "liangqifan@u.nus.edu"
   wechat           : true
   researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
   uri              :
@@ -61,6 +64,19 @@ author:
   wikipedia        :
 
 
+# Campus hero banner (shown above the page; remove `image` to disable)
+hero:
+  image            : "images/hero/nus-erc-utown-1600.jpg"
+  webp_srcset      : "images/hero/nus-erc-utown-960.webp 960w, images/hero/nus-erc-utown-1600.webp 1600w, images/hero/nus-erc-utown-2400.webp 2400w"
+  alt              : "The Education Resource Centre at NUS University Town, lit up at dusk"
+  position         : "50% 32%"   # object-position: keeps the whole building in frame at every width
+  caption          : "Education Resource Centre · NUS University Town"
+  credit           : "National University of Singapore"
+  credit_url       : "https://nus.edu.sg/nusgiving/about-nus-giving"
+  license          :
+  license_url      :
+
+
 # Reading Files
 include:
   - .htaccess
@@ -68,6 +84,9 @@ include:
   - files
 exclude:
   - docs
+  - run_server.sh
+  - push.sh
+  - README.md
   - google_scholar_crawler
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -144,16 +163,12 @@ timezone: Asia/Shanghai # http://en.wikipedia.org/wiki/List_of_tz_database_time_
 # Plugins
 plugins:
   - jekyll-paginate
-  - jekyll-sitemap
   - jekyll-gist
-  - jekyll-feed
   - jekyll-redirect-from
 # mimic GitHub Pages with --safe
 whitelist:
   - jekyll-paginate
-  - jekyll-sitemap
   - jekyll-gist
-  - jekyll-feed
   - jemoji
 
 

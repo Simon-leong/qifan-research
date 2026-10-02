@@ -1,0 +1,84 @@
+<div class="agi-roadmap">
+  <div class="agi-title">Towards Surgical AGI</div>
+  <div class="agi-panels">
+    <svg class="agi-explore" viewBox="0 0 620 490" role="img" aria-labelledby="agi-explore-title">
+      <title id="agi-explore-title">Exploration: research branches leading towards Surgical AGI</title>
+      <defs>
+        <marker id="ah-gold" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#e9cf55"/></marker>
+        <marker id="ah-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#ef8a6c"/></marker>
+        <marker id="ah-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#56b4e9"/></marker>
+        <marker id="ah-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4cc38a"/></marker>
+      </defs>
+      <text class="agi-panel-title" x="300" y="30" text-anchor="middle">1) <tspan text-decoration="underline">Exploration</tspan></text>
+      <!-- trunk: from today's AI to Surgical AGI -->
+      <path class="agi-line" d="M80 440 C 290 435 460 340 560 138" fill="none" stroke="#f0dc78" stroke-width="3.5" marker-end="url(#ah-gold)"/>
+      <text x="18" y="462" font-size="44">🤖</text>
+      <text x="522" y="128" font-size="40">🦾</text>
+      <text class="agi-goal" x="548" y="74" text-anchor="middle">Surgical AGI</text>
+      <!-- Perception -->
+      <g class="agi-line" stroke="#ef8a6c" fill="none" stroke-width="2.4">
+        <path d="M157 434 C 150 340 165 240 212 158" marker-end="url(#ah-red)"/>
+        <path d="M153 380 Q 100 372 62 330" marker-end="url(#ah-red)"/>
+        <path d="M165 262 Q 120 252 92 214" stroke-dasharray="5 5" marker-end="url(#ah-red)"/>
+      </g>
+      <text class="agi-branch" x="212" y="146" text-anchor="middle" fill="#d9603b">Perception</text>
+      <text class="agi-topic" x="62" y="300" text-anchor="middle"><tspan x="62">Surgical Video</tspan><tspan x="62" dy="16">Restoration</tspan></text>
+      <text class="agi-topic agi-future" x="92" y="188" text-anchor="middle"><tspan x="92">3D Surgical</tspan><tspan x="92" dy="15">Scene Modeling</tspan></text>
+      <!-- Understanding -->
+      <g class="agi-line" stroke="#56b4e9" fill="none" stroke-width="2.4">
+        <path d="M230 419 C 245 330 290 220 348 128" marker-end="url(#ah-blue)"/>
+        <path d="M262 300 Q 320 286 368 266" marker-end="url(#ah-blue)"/>
+        <path d="M302 205 Q 350 192 392 178" stroke-dasharray="5 5" marker-end="url(#ah-blue)"/>
+      </g>
+      <text class="agi-branch" x="350" y="116" text-anchor="middle" fill="#2f8fc7">Understanding</text>
+      <text class="agi-topic" x="374" y="262"><tspan x="374">Surgical Intent</tspan><tspan x="374" dy="16">Reasoning</tspan></text>
+      <text class="agi-topic agi-future" x="398" y="174"><tspan x="398">Surgical Video-</tspan><tspan x="398" dy="15">Language Models</tspan></text>
+      <!-- Multimodal Interaction -->
+      <g class="agi-line" stroke="#4cc38a" fill="none" stroke-width="2.4">
+        <path d="M362 362 C 430 366 510 350 596 312" marker-end="url(#ah-green)"/>
+        <path d="M440 364 Q 450 408 480 440" marker-end="url(#ah-green)"/>
+        <path d="M384 365 Q 374 415 332 452" marker-end="url(#ah-green)"/>
+        <path d="M562 328 Q 586 350 598 382" stroke-dasharray="5 5" marker-end="url(#ah-green)"/>
+      </g>
+      <text class="agi-branch" x="612" y="276" text-anchor="end" fill="#2e9e68"><tspan x="612">Multimodal</tspan><tspan x="612" dy="21">Interaction</tspan></text>
+      <text class="agi-topic" x="486" y="452"><tspan x="486">Multi-Agent</tspan><tspan x="486" dy="16">Collaboration</tspan></text>
+      <text class="agi-topic" x="322" y="466" text-anchor="end"><tspan x="322">Speech &amp; 3D Motion</tspan><tspan x="322" dy="16">Generation</tspan></text>
+      <text class="agi-topic agi-future" x="612" y="400" text-anchor="end"><tspan x="612">Embodied</tspan><tspan x="612" dy="15">Surgical Robots</tspan></text>
+      <!-- SurgIntent-Agent is also a multi-agent framework -->
+      <path class="agi-line" d="M326 297 Q 380 345 446 388" fill="none" stroke="#9aa5b1" stroke-width="1.4" stroke-dasharray="3 4"/>
+      <!-- papers -->
+      <g class="agi-pill" stroke="#ef8a6c"><rect x="96" y="360" width="56" height="21" rx="10.5"/><text x="124" y="375">STSVD</text></g>
+      <g class="agi-pill" stroke="#ef8a6c"><rect x="38" y="336" width="72" height="21" rx="10.5"/><text x="74" y="351">SurgOmni</text></g>
+      <g class="agi-pill" stroke="#56b4e9"><rect x="282" y="276" width="76" height="21" rx="10.5"/><text x="320" y="291">SurgIntent</text></g>
+      <g class="agi-pill" stroke="#4cc38a"><rect x="415" y="388" width="66" height="21" rx="10.5"/><text x="448" y="403">AIMPACT</text></g>
+      <g class="agi-pill" stroke="#4cc38a"><rect x="344" y="390" width="64" height="21" rx="10.5"/><text x="376" y="405">TED-TTS</text></g>
+      <g class="agi-pill" stroke="#4cc38a"><rect x="306" y="424" width="86" height="21" rx="10.5"/><text x="349" y="439">PersonaGest</text></g>
+    </svg>
+    <svg class="agi-vision" viewBox="0 0 620 490" role="img" aria-labelledby="agi-vision-title">
+      <title id="agi-vision-title">Research vision: Perception, Understanding and Interaction working together</title>
+      <defs>
+        <filter id="agi-blur-lg" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="26"/></filter>
+        <filter id="agi-blur-sm" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="10"/></filter>
+        <marker id="ah-v" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="context-stroke"/></marker>
+      </defs>
+      <text class="agi-panel-title" x="310" y="30" text-anchor="middle">2) <tspan text-decoration="underline">Research Vision</tspan></text>
+      <ellipse cx="310" cy="282" rx="272" ry="172" fill="#fff2a6" opacity="0.75" filter="url(#agi-blur-lg)"/>
+      <text class="agi-goal" x="310" y="104" text-anchor="middle">Surgical AGI</text>
+      <ellipse cx="310" cy="186" rx="108" ry="34" fill="#f7a68c" opacity="0.85" filter="url(#agi-blur-sm)"/>
+      <ellipse cx="165" cy="362" rx="112" ry="34" fill="#8fd0f5" opacity="0.9" filter="url(#agi-blur-sm)"/>
+      <ellipse cx="455" cy="362" rx="112" ry="34" fill="#8fe2b8" opacity="0.9" filter="url(#agi-blur-sm)"/>
+      <text class="agi-node" x="310" y="194" text-anchor="middle">👁️ Perception</text>
+      <text class="agi-node" x="165" y="370" text-anchor="middle">🧠 Understanding</text>
+      <text class="agi-node" x="455" y="370" text-anchor="middle">💬 Interaction</text>
+      <text class="agi-caption" x="310" y="234" text-anchor="middle">see the scene clearly</text>
+      <text class="agi-caption" x="165" y="410" text-anchor="middle">know what the surgeon wants</text>
+      <text class="agi-caption" x="455" y="410" text-anchor="middle">talk, move and work together</text>
+      <g class="agi-line" fill="none" stroke-width="2.6" marker-end="url(#ah-v)" marker-start="url(#ah-v)">
+        <path d="M222 236 Q 192 280 180 322" stroke="#f08e75"/>
+        <path d="M398 236 Q 428 280 440 322" stroke="#4cc38a"/>
+        <path d="M262 376 L 356 376" stroke="#56b4e9"/>
+      </g>
+      <text class="agi-synergy" x="310" y="300" text-anchor="middle">synergy</text>
+    </svg>
+  </div>
+</div>
