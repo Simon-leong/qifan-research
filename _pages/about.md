@@ -6,8 +6,6 @@ redirect_from:
   - /about.html
 ---
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap&text=%E5%AE%81%E9%9D%99%E8%87%B4%E8%BF%9C%E6%A2%81');
-
     #research-interests,
     #news,
     #experience,
@@ -75,6 +73,12 @@ redirect_from:
     .experience-info a {
         text-decoration: none;
         color: #ca6f6f;
+    }
+    .exp-focus {
+        margin-top: 6px;
+        color: #5f6368;
+        font-size: 14px;
+        line-height: 1.55;
     }
     .experience-container {
         display: flex;
@@ -412,36 +416,11 @@ redirect_from:
         border-radius: 8px;
         overflow: hidden;
     }
-    .hobby-visual--ink {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        padding-top: 10px;
-        box-sizing: border-box;
-        background: #f5eedd;
-        border: 1px solid #e6dcc4;
-    }
-    .ink-scroll {
-        writing-mode: vertical-rl;
-        font-family: "Ma Shan Zheng", "STKaiti", "KaiTi", serif;
-        font-size: 30px;
-        line-height: 1;
-        letter-spacing: 3px;
-        color: #1c1c1c;
-    }
-    .ink-seal {
-        position: absolute;
-        right: 12px;
-        bottom: 10px;
-        width: 22px;
-        height: 22px;
-        border-radius: 3px;
-        background: #b8322a;
-        color: #fff;
-        font-family: "Ma Shan Zheng", "STKaiti", "KaiTi", serif;
-        font-size: 16px;
-        line-height: 22px;
-        text-align: center;
+    .hobby-visual img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
     .hobby-title {
         margin-bottom: 6px;
@@ -591,7 +570,7 @@ redirect_from:
 </body>
 </html>
 
-Hi! I am Qifan Liang (Simon Leong), a Master of Computing (AI) student at the National University of Singapore (expected Jan 2027), working in the [Sound and Music Computing Lab](https://smcnus.comp.nus.edu.sg/) with Prof. [Ye Wang](https://www.comp.nus.edu.sg/cs/people/wangye/). I received my B.Eng. in Computer Science from Wuhan University, where I worked with Prof. [Zhen Han](https://dblp.org/pid/62/302-2.html) and Prof. [Zhongyuan Wang](https://cs.whu.edu.cn/info/1019/2495.htm) at the [National Engineering Research Center for Multimedia Software](https://multimedia.whu.edu.cn/index.htm). I have also collaborated with Prof. [Yixuan Yuan](https://www.ee.cuhk.edu.hk/en-gb/people/academic-staff/professors/prof-yixuan-yuan)'s AIM Group at The Chinese University of Hong Kong on surgical video restoration and surgical intent understanding, and with Prof. [Jens Rittscher](https://ibme.ox.ac.uk/person/jens-rittscher/) at the Big Data Institute, University of Oxford.
+Hi! I am Qifan Liang (Simon Leong), a Master of Computing (AI) student at the National University of Singapore (expected Jan 2027), working in the [Sound and Music Computing Lab](https://smcnus.comp.nus.edu.sg/) with Prof. [Ye Wang](https://www.comp.nus.edu.sg/cs/people/wangye/). I received my B.Eng. in Computer Science from Wuhan University, where I worked with Prof. [Zhen Han](https://dblp.org/pid/62/302-2.html) and Prof. [Zhongyuan Wang](https://cs.whu.edu.cn/info/1019/2495.htm) at the [National Engineering Research Center for Multimedia Software](https://multimedia.whu.edu.cn/index.htm). I have also worked with surgeons from Zhongnan Hospital of Wuhan University on laparoscopic video analysis, collaborated with Prof. [Yixuan Yuan](https://www.ee.cuhk.edu.hk/en-gb/people/academic-staff/professors/prof-yixuan-yuan)'s AIM Group at The Chinese University of Hong Kong on surgical video restoration and surgical intent understanding, and worked with Prof. [Jens Rittscher](https://ibme.ox.ac.uk/person/jens-rittscher/) at the Big Data Institute, University of Oxford, on learning from scarce data.
 
 Feel free to reach out if you are interested in collaboration or potential opportunities!
 
@@ -617,13 +596,13 @@ My long-term goal is to build **Surgical AGI**, an AI system that can see the su
   <ul class="news-list">
     <li><span class="news-date"><em>2026.09</em></span> 🎉🎉 Three papers submitted to <strong>ICLR 2027</strong>: <strong>SurgOmni</strong>, <strong>AIMPACT</strong>, and <strong>SurgIntent</strong>. Thanks to all co-authors!</li>
     <li><span class="news-date"><em>2026.07</em></span> 🎤 I presented TED-TTS at <img src="images/acl_logo.svg" style="height:14px; vertical-align:middle; margin: 0 2px;"> <strong>ACL 2026</strong> (online).</li>
-    <li><span class="news-date"><em>2026.04</em></span> 🎉🎉 One paper accepted to <img src="images/acl_logo.svg" style="height:14px; vertical-align:middle; margin: 0 2px;"> <strong>ACL 2026</strong>, <span style="color:#ca6f6f;font-weight:600;">nominated for Oral by SAC</span>. Thanks to all co-authors!</li>
+    <li><span class="news-date"><em>2026.04</em></span> 🎉🎉 One paper accepted to <img src="images/acl_logo.svg" style="height:14px; vertical-align:middle; margin: 0 2px;"> <strong>ACL 2026</strong>, <span style="color:#ca6f6f;font-weight:600;">nominated for Oral by SAC (Scores: 9/10)</span>. Thanks to all co-authors!</li>
     <li><span class="news-date"><em>2026.01</em></span> 🎤 I presented our surgical desmoking paper at <img src="images/new/AAAI-26_logo.png" style="height:14px; vertical-align:middle; margin: 0 2px;"> <strong>AAAI 2026</strong> in Singapore.</li>
     <li><span class="news-date"><em>2026.01</em></span> 🤝 I started collaborating with Prof. <a href="https://www.ee.cuhk.edu.hk/en-gb/people/academic-staff/professors/prof-yixuan-yuan">Yixuan Yuan</a>'s <strong>AIM Group</strong> at <strong>The Chinese University of Hong Kong</strong> on surgical video restoration and surgical intent reasoning.</li>
     <li><span class="news-date"><em>2025.12</em></span> 🎉🎉 One paper accepted to <img src="images/new/AAAI-26_logo.png" style="height:14px; vertical-align:middle; margin: 0 2px;"> <strong>AAAI 2026</strong>. Thanks to all co-authors!</li>
     <li><span class="news-date"><em>2025.11</em></span> 🎉 I joined the <a href="https://smcnus.comp.nus.edu.sg/">Sound and Music Computing Lab</a> at <img src="images/NUS.png" style="height:14px; vertical-align:middle; margin: 0 2px;"> <strong>National University of Singapore</strong>, supervised by Prof. <a href="https://www.comp.nus.edu.sg/cs/people/wangye/">Ye Wang</a>.</li>
     <li><span class="news-date"><em>2025.08</em></span> 🎉 I joined the <strong>MComp AI</strong> program at <img src="images/NUS.png" style="height:14px; vertical-align:middle; margin: 0 2px;"> <strong>National University of Singapore</strong>.</li>
-    <li><span class="news-date"><em>2025.05</em></span> My undergraduate thesis was awarded as an <strong>Outstanding Graduation Thesis</strong> at <img src="images/WHU.png" style="height:13px; vertical-align:middle; margin: 0 2px;"> <strong>Wuhan University</strong>.</li>
+    <li><span class="news-date"><em>2025.05</em></span> My undergraduate thesis was awarded as an <strong>Outstanding Undergraduate Thesis</strong> at <img src="images/WHU.png" style="height:13px; vertical-align:middle; margin: 0 2px;"> <strong>Wuhan University</strong>.</li>
     <li><span class="news-date"><em>2025.05</em></span> I received the <strong>Lei Jun Computer Innovation and Development Grant</strong> and the <strong>Lei Jun Computer Research Grant</strong> from <img src="images/xiaomi_logo.png" style="height:14px; vertical-align:middle; margin: 0 2px;"> <strong>Xiaomi</strong>.</li>
     <li><span class="news-date"><em>2025.03</em></span> I received the honor of <strong>Outstanding Graduate</strong> of the School of Computer Science at <img src="images/WHU.png" style="height:13px; vertical-align:middle; margin: 0 2px;"> <strong>Wuhan University</strong>.</li>
     <li><span class="news-date"><em>2024.11</em></span> I won the <img src="images/didi_logo.png" style="height:13px; vertical-align:middle; margin: 0 2px;"> <strong>DiDi Inc. Outstanding Undergraduate Scholarship</strong> (<strong>1/254</strong>, major-wide) at <img src="images/WHU.png" style="height:13px; vertical-align:middle; margin: 0 2px;"> <strong>Wuhan University</strong>.</li>
@@ -645,13 +624,14 @@ My long-term goal is to build **Surgical AGI**, an AI system that can see the su
 
   <div class="experience-card">
     <div class="experience-logos">
-      <img src="images/new/whu_emblem.png" alt="Wuhan University logo">
       <img src="images/new/cuhk_emblem.png" alt="CUHK logo">
+      <img src="images/new/whu_emblem.png" alt="Wuhan University logo">
     </div>
     <div class="experience-info">
-      <strong>Wuhan University × AIM Group, The Chinese University of Hong Kong</strong><br>
+      <strong>AIM Group, The Chinese University of Hong Kong × Wuhan University</strong><br>
       <em>2026.01 – 2026.09 · Remote</em><br>
-      Student Researcher, advised by Prof. <a href="https://dblp.org/pid/62/302-2.html"><em>Zhen Han</em></a> and Prof. <a href="https://cs.whu.edu.cn/info/1019/2495.htm"><em>Zhongyuan Wang</em></a> (WHU), in collaboration with Prof. <a href="https://www.ee.cuhk.edu.hk/en-gb/people/academic-staff/professors/prof-yixuan-yuan"><em>Yixuan Yuan</em></a>'s AIM Group (CUHK)
+      Student Researcher in collaboration with Prof. <a href="https://www.ee.cuhk.edu.hk/en-gb/people/academic-staff/professors/prof-yixuan-yuan"><em>Yixuan Yuan</em></a>'s AIM Group (CUHK), advised by Prof. <a href="https://dblp.org/pid/62/302-2.html"><em>Zhen Han</em></a> and Prof. <a href="https://cs.whu.edu.cn/info/1019/2495.htm"><em>Zhongyuan Wang</em></a> (WHU)
+      <div class="exp-focus">Surgical perception and understanding: restoring clear operating scenes under smoke, splash, blur and uneven lighting (ICLR 2027), and inferring the intent behind surgical maneuvers with knowledge-guided agents (ICLR 2027).</div>
     </div>
   </div>
 
@@ -661,6 +641,7 @@ My long-term goal is to build **Surgical AGI**, an AI system that can see the su
       <strong>Sound and Music Computing Lab, National University of Singapore</strong><br>
       <em>2025.11 – Present · Singapore</em><br>
       Student Researcher at <a href="https://smcnus.comp.nus.edu.sg/"><em>SMC Lab</em></a>, advised by Prof. <a href="https://www.comp.nus.edu.sg/cs/people/wangye/"><em>Ye Wang</em></a>
+      <div class="exp-focus">Multimodal interaction: expert-aligned agents that assess human communication in presentations (ICLR 2027), expressive speech synthesis (ACL 2026), and personalized speech-driven 3D gestures (IEEE TMM).</div>
     </div>
   </div>
 
@@ -670,6 +651,7 @@ My long-term goal is to build **Surgical AGI**, an AI system that can see the su
       <strong>National Engineering Research Center for Multimedia Software, Wuhan University</strong><br>
       <em>2022.09 – 2025.06 · Wuhan, China</em><br>
       Student Researcher at <a href="http://multimedia.whu.edu.cn/"><em>NERCMS</em></a>, advised by Prof. <a href="https://dblp.org/pid/62/302-2.html"><em>Zhen Han</em></a> and Prof. <a href="https://cs.whu.edu.cn/info/1019/2495.htm"><em>Zhongyuan Wang</em></a>
+      <div class="exp-focus">Surgical low-level vision: smoke-type-aware laparoscopic video desmoking, supported by a dataset built with surgeons from Zhongnan Hospital of Wuhan University (AAAI 2026), together with few-shot face synthesis (ACM TOMM).</div>
     </div>
   </div>
 
@@ -703,7 +685,7 @@ My long-term goal is to build **Surgical AGI**, an AI system that can see the su
       <i style="font-size: 13px;">
         <span class="au-me">Qifan Liang</span><sup class="eq-contrib">*</sup>, J Lyu<sup class="eq-contrib">*</sup>, J Li<sup class="eq-contrib">*</sup>, S Li<sup class="eq-contrib">*</sup>, …, J Hao, <span class="au-corr">Zhen Han<sup>†</sup></span>, Yixuan Yuan, Zhongyuan Wang
       </i><br>
-      A unified dataset and benchmark suite for all-in-one surgical video restoration. A formation-aware synthesis pipeline built in a 3D engine models smoke, haze, splash, motion blur and non-uniform illumination to produce a 44K-frame paired training set, complemented by a 10K-frame real-world test set spanning 6 surgery types, 10 organs and 27 scenes, with 15 restoration methods benchmarked.
+      A unified dataset and benchmark suite for all-in-one surgical video restoration: a 44K-frame paired training set synthesized in a 3D engine from the physical formation of smoke, haze, splash, motion blur and non-uniform illumination, a 10K-frame real-world test set covering 6 surgery types, 10 organs and 27 scenes, and a benchmark of 15 restoration methods that provides a practical foundation for future surgical restoration.
       <br>
       <b><i style="color:#83a1c7;">ICLR 2027 (Under Review) &nbsp;</i></b>
       <a href="#" class="pub-review-link" role="button"><em>[paper]</em></a>
@@ -722,7 +704,7 @@ My long-term goal is to build **Surgical AGI**, an AI system that can see the su
       <i style="font-size: 13px;">
         <span class="au-me">Qifan Liang</span><sup class="eq-contrib">*</sup>, N Ang<sup class="eq-contrib">*</sup>, Z Wang, S Luan, B Yuen, <span class="au-corr">Ye Wang<sup>†</sup></span>
       </i><br>
-      A trustworthy multi-agent collaboration framework in which seven specialist agents reason over a shared, traceable evidence memory, resolve disagreements through a reliability-guided collaboration graph and multi-round deliberation, and are post-trained with RC-MEPO preference optimization to align with expert judgments.
+      An evidence-to-judgment multi-agent framework that coordinates seven specialist agents over traceable multimodal evidence through reliability-guided graph collaboration, with RC-MEPO, a reinforcement learning strategy that aligns rubric-based judgments with confidence-weighted expert preferences and achieves the strongest expert alignment among MLLMs.
       <br>
       <b><i style="color:#83a1c7;">ICLR 2027 (Under Review) &nbsp;</i></b>
       <a href="#" class="pub-review-link" role="button"><em>[paper]</em></a>
@@ -741,7 +723,8 @@ My long-term goal is to build **Surgical AGI**, an AI system that can see the su
       <i style="font-size: 13px;">
         P Hao, S Li, Y Li, …, J Hao, <span class="au-me">Qifan Liang</span>, Z Kou, …, Yixuan Yuan, <span class="au-corr">L Zhu<sup>†</sup></span>
       </i><br>
-      A comprehensive benchmark for surgical intent understanding across anatomical, functional, coordinative and prospective dimensions, and SurgIntent-Agent, a knowledge-guided multi-agent framework that actively probes surgical videos to verify and refine its reasoning, surpassing the strongest general-purpose MLLM.
+A benchmark for understanding the intent behind surgical maneuvers across anatomical, functional, coordinative and prospective dimensions. The proposed SurgIntent-Agent combines visual evidence with retrieved surgical knowledge and probes the video to verify its hypotheses, achieving 67.62%
+accuracy and outperforming the strongest general-purpose MLLM by 10.3%.
       <br>
       <b><i style="color:#83a1c7;">ICLR 2027 (Under Review) &nbsp;</i></b>
     </div>
@@ -758,7 +741,7 @@ My long-term goal is to build **Surgical AGI**, an AI system that can see the su
       <i style="font-size: 13px;">
         <span class="au-me">Qifan Liang</span>, Junlin Li, <span class="au-corr">Zhen Han<sup>†</sup></span>, Xihao Wang, Zhongyuan Wang, Bin Mei
       </i><br>
-      Categorizes surgical smoke into Diffusion and Ambient types by temporal motion pattern and proposes STANet, a spatio-temporal disentanglement network for smoke-type-aware video desmoking, together with STSVD, the first large-scale synthetic desmoking dataset with smoke-type annotations.
+Categorizes surgical smoke into Diffusion and Ambient types based on temporal motion patterns, proposes a spatio-temporal disentanglement network for state-of-the-art smoke-type-aware video desmoking, and introduces the first large-scale synthetic video desmoking dataset with smoke-type annotations, developed in collaboration with surgeons from Zhongnan Hospital.
       <br>
       <b><i style="color:#83a1c7;">AAAI 2026 &nbsp;</i></b>
       <a href="https://ojs.aaai.org/index.php/AAAI/article/view/37617" target="_blank"><em>[paper]</em></a>
@@ -919,9 +902,9 @@ My long-term goal is to build **Surgical AGI**, an AI system that can see the su
 
 <div class="section-heading" style="--accent:#d4a847;" id="awards">🏆 Honors &amp; Awards</div>
 
-- *2025.05* **Outstanding Graduation Thesis** · *Wuhan University*
+- *2025.05* **Outstanding Undergraduate Thesis** · *Wuhan University*
 - *2025.05* **Lei Jun Computer Innovation and Development Fund** & **Lei Jun Computer Research Grant** (Rate: 7.2%, major-wide) · *Xiaomi Corporation*
-- *2025.03* **Outstanding Graduate** · *School of Computer Science, Wuhan University*
+- *2025.03* **Outstanding Graduate** (Top 5%) · *School of Computer Science, Wuhan University*
 - *2024.11* **Outstanding Undergraduate Scholarship** (1/254, major-wide) · *DiDi Inc.*
 - *2024, 2023.10* **Merit Student** (Top 5%, school-wide) · *Wuhan University*
 - *2024.05* **National University Students' Innovation & Entrepreneurship Fund** (Top 3%, school-wide) · *Wuhan University*
@@ -929,12 +912,11 @@ My long-term goal is to build **Surgical AGI**, an AI system that can see the su
 - *2023.11* **Outstanding Undergraduate Scholarship** (1/254, major-wide) · *Samsung Group, South Korea*
 - *2023.10* **First-Class Scholarship** (Top 5%, school-wide) · *Wuhan University*
 - *2023.06* **National Grand Prize** (Top 0.5%, nation-wide) · *2023 National University Student Surveying & Mapping Competition*
-- *2022.10* **Outstanding Student** (Top 30%, school-wide) · *Wuhan University*
 
 
 <div class="section-heading" style="--accent:#9b7ec8;" id="services">🤝 Services</div>
 
-- Conference Reviewer: AAAI 2026, AAAI 2027
+- Conference Reviewer: AAAI 2026, NeurIPS 2026, AAAI 2027, ICLR 2027
 - Presenter, AAAI Conference on Artificial Intelligence (AAAI 2026), Singapore, Jan 2026
 - Presenter, Annual Meeting of the Association for Computational Linguistics (ACL 2026), Online, Jul 2026
 - Conference Participant, China Computer Federation (CCF) Computer Networking Conference, Wenzhou, China, 2023
@@ -946,14 +928,13 @@ My long-term goal is to build **Surgical AGI**, an AI system that can see the su
 
 <div class="hobby-grid">
   <div class="hobby-card">
-    <div class="hobby-visual hobby-visual--ink" aria-hidden="true">
-      <span class="ink-scroll">宁静致远</span>
-      <span class="ink-seal">梁</span>
+    <div class="hobby-visual">
+      <img src="images/new/calligraphy.jpg" alt="My calligraphy scroll reading 宁静致远, laid over practice sheets" loading="lazy">
     </div>
     <div>
       <div class="hobby-title">🖌️ Calligraphy<span class="hobby-zh">书法</span></div>
       <div class="hobby-text">
-        I turn to calligraphy when I want to slow down. I lay out some rice paper and write a few characters at a time. A stroke can't be taken back once it's on the paper, so I have to stay focused, and I usually feel calmer by the time I put the brush down.
+I turn to calligraphy when I want to slow down. I lay out a sheet of rice paper and write a few characters at a time. Once a stroke is on the paper, there is no taking it back, so I have to stay focused. By the time I put the brush down, I usually feel much calmer.
       </div>
     </div>
   </div>
@@ -978,7 +959,7 @@ My long-term goal is to build **Surgical AGI**, an AI system that can see the su
     <div>
       <div class="hobby-title">🏸 Badminton<span class="hobby-zh">羽毛球</span></div>
       <div class="hobby-text">
-        Badminton is the sport I play most. After a long week of experiments, a couple of hours on the court with friends is the best way I know to switch off and recharge.
+Badminton is the sport I play most often. After a long week of experiments, spending a couple of hours on the court with friends is one of my favorite ways to switch off and recharge.
       </div>
     </div>
   </div>
